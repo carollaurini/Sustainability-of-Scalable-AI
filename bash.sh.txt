@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Function to execute the command with parameters
+function exec_command() {
+   arr=("$@")
+   for i in "${arr[@]}";
+      do
+   	  for ((j=1; j<=1000; j++));
+             do	
+	       "./out.exe" "$i" "$j" 
+
+             done
+      done
+}
+
+array=(2 3 4 10 25 50 75 100 1000)
+
+exec_command "${array[@]}"
+
